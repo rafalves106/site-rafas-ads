@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solicitação Recebida! | Rafa's Turismo</title>
+
+    <link rel="icon" type="image/webp" href="/images/favicon.webp" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* 1. Reset e Variáveis Básicas */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        line-height: 1.6;
+        color: #334155;
+      }
+
+      /* 2. Layout da Página (Fundo Degradê) */
+      .thank-you-page {
+        margin: 0;
+        padding: 0;
+        /* Degradê Azul da Marca */
+        background: linear-gradient(135deg, #1d59a9 0%, #0f346b 100%);
+        min-height: 100vh; /* Ocupa 100% da altura da tela */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* 3. O Cartão Branco Central */
+      .thank-you-card {
+        background: white;
+        padding: 60px 40px;
+        border-radius: 30px;
+        text-align: center;
+        max-width: 500px;
+        width: 90%; /* Responsivo no mobile */
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+
+        /* Animação de entrada suave */
+        animation: popIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+
+      /* 4. Ícone de Sucesso */
+      .success-icon span {
+        font-size: 80px;
+        color: #7abb35; /* Verde da marca */
+        margin-bottom: 20px;
+        display: inline-block;
+      }
+
+      /* 5. Textos */
+      .thank-you-card h1 {
+        font-size: 2rem;
+        color: #1d59a9; /* Azul da marca */
+        margin-bottom: 15px;
+        line-height: 1.2;
+        font-weight: 700;
+      }
+
+      .thank-you-card .subtitle {
+        color: #64748b;
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+      }
+
+      .thank-you-card .divider {
+        height: 1px;
+        background: #e2e8f0;
+        margin: 30px 0;
+      }
+
+      .thank-you-card .urgent-text {
+        font-size: 0.95rem;
+        color: #334155;
+        margin-bottom: 20px;
+        font-weight: 500;
+      }
+
+      /* 6. Botão WhatsApp Grande */
+      .btn-whatsapp-large {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background-color: #25d366;
+        color: white;
+        text-decoration: none;
+        padding: 18px;
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 1.1rem;
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+        box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+        margin-bottom: 20px;
+      }
+
+      .btn-whatsapp-large:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 30px rgba(37, 211, 102, 0.4);
+        background-color: #20bd5a;
+      }
+
+      /* 7. Botão Voltar */
+      .btn-back {
+        color: #94a3b8;
+        font-size: 0.9rem;
+        text-decoration: none;
+        font-weight: 500;
+        display: inline-block;
+        margin-top: 10px;
+        transition: 0.3s;
+      }
+      .btn-back:hover {
+        color: #1d59a9;
+        text-decoration: underline;
+      }
+
+      /* Animação Keyframes */
+      @keyframes popIn {
+        from {
+          opacity: 0;
+          transform: scale(0.8);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    </style>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        let scriptLoaded = false;
+        function loadGTM() {
+          if (scriptLoaded) return;
+          scriptLoaded = true;
+          const script = document.createElement("script");
+          script.src =
+            "https://www.googletagmanager.com/gtag/js?id=G-X6CZ222JN5";
+          script.async = true;
+          document.head.appendChild(script);
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+          gtag("config", "G-X6CZ222JN5");
+          gtag("config", "AW-940582185");
+        }
+        window.addEventListener("mousemove", loadGTM, { once: true });
+        window.addEventListener("touchstart", loadGTM, { once: true });
+        setTimeout(loadGTM, 5000);
+      });
+    </script>
+  </head>
+
+  <body class="thank-you-page">
+    <div class="thank-you-card">
+      <div class="success-icon">
+        <span class="material-icons-round">check_circle</span>
+      </div>
+
+      <h1>Solicitação Recebida!</h1>
+      <p class="subtitle">
+        Obrigado pelo contato. Nossa equipe já recebeu seus dados e retornará em
+        breve.
+      </p>
+
+      <div class="divider"></div>
+
+      <p class="urgent-text">
+        Tem muita urgência? Fale com a gente agora mesmo:
+      </p>
+
+      <a
+        href="https://wa.me/5531986315775?text=Olá,%20acabei%20de%20enviar%20uma%20solicitação%20pelo%20site%20e%20tenho%20urgência."
+        target="_blank"
+        class="btn-whatsapp-large"
+      >
+        CHAMAR NO WHATSAPP
+      </a>
+
+      <a href="/" class="btn-back">Voltar ao Site</a>
+    </div>
+  </body>
+</html>
